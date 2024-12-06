@@ -64,7 +64,6 @@ SECRET_KEY=your_flask_secret_key
 5. **Run the Application**
    ```
     python run.py
-   
    ```
 6. **Access the Dashboard**
 
