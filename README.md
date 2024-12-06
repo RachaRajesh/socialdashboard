@@ -28,11 +28,8 @@ git clone https://github.com/RachaRajesh/socialdashboard
   
   ``` source venv/bin/activate ``` (MAC OR LINUX)
   
-           (or)
-
   ``` source venv/Scripts/activate ```(WINDOWS)
 
-   
   ``` pip install -r requirements. txt ```
    
 4. **Set Up the Database**
