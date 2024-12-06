@@ -19,29 +19,29 @@ The Social Media Management Dashboard is a web application that enables users to
    
 ### Steps
 1. **Clone the Repository**
-
+---
 git clone https://github.com/RachaRajesh/socialdashboard
-
+---
 2. **Virtual Environment Setup**
    
-  -- python3 -m venv venv
-  -- source venv/bin/activate  (MAC OR LINUX)
+  --- python3 -m venv venv ---
+  --- source venv/bin/activate --- (MAC OR LINUX)
            (or)
-  -- source venv/Scripts/activate (WINDOWS)
+  --- source venv/Scripts/activate ---(WINDOWS)
    
-  -- pip install -r requirements. txt
+  --- pip install -r requirements. txt ---
    
 4. **Set Up the Database**
 
 Set up the SQLite database and tables:
 
   in  python
-  
+  ---
 >>> from app. models import db, User, Post
    >>> db.connect()
 >>> db. create_tables([User, Post])
 >>> User. create(username="default_user", email="default@example.com")
-  
+  ---
 4. **Set Up Environment Variables**
    
 Create a `. env` file then you add the below:example.env is given in repo
