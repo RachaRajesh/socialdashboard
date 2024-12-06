@@ -19,9 +19,9 @@ The Social Media Management Dashboard is a web application that enables users to
    
 ### Steps
 1. **Clone the Repository**
----
+```
 git clone https://github.com/RachaRajesh/socialdashboard
----
+```
 2. **Virtual Environment Setup**
    
   ``` python3 -m venv venv ```
