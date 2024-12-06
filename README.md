@@ -68,7 +68,7 @@ SECRET_KEY=your_flask_secret_key
 6. **Access the Dashboard**
 
 In your browser visit  http://127.0.0.1:5000
-```
+
 
 ---
 
@@ -80,7 +80,7 @@ In your browser visit  http://127.0.0.1:5000
 - **Python-dotenv** — To manage environment variables.
 – **Jinja2**: For HTML template rendering on Flask.
 You will need to install these dependencies with:
-
+```
 pip install -r requirements. txt
 ```
 
