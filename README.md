@@ -25,11 +25,15 @@ git clone https://github.com/RachaRajesh/socialdashboard
 2. **Virtual Environment Setup**
    
   ``` python3 -m venv venv ```
-  --- source venv/bin/activate --- (MAC OR LINUX)
+  
+  ``` source venv/bin/activate ``` (MAC OR LINUX)
+  
            (or)
-  --- source venv/Scripts/activate ---(WINDOWS)
+
+  ``` source venv/Scripts/activate ```(WINDOWS)
+
    
-  --- pip install -r requirements. txt ---
+  ``` pip install -r requirements. txt ```
    
 4. **Set Up the Database**
 
