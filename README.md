@@ -30,7 +30,7 @@ git clone https://github.com/RachaRajesh/socialdashboard
   
   ``` source venv/Scripts/activate ```(WINDOWS)
 
-  ``` pip install -r requirements. txt ```
+  ``` pip install -r requirements.txt ```
    
 4. **Set Up the Database**
 
@@ -46,7 +46,7 @@ Set up the SQLite database and tables:
 4. **Set Up Environment Variables**
    
 Create a `. env` file then you add the below:example.env is given in repo
-   
+ ```  
 TWITTER_API_KEY=
 TWITTER_API_SECRET=
 TWITTER_BEARER_TOKEN=
@@ -58,6 +58,7 @@ INSTAGRAM_ACCESS_TOKEN =
 INSTAGRAM_USER_ID=
 #optional
 SECRET_KEY=your_flask_secret_key
+```
    ```
 
 5. **Run the Application**
