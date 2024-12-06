@@ -59,15 +59,16 @@ INSTAGRAM_USER_ID=
 #optional
 SECRET_KEY=your_flask_secret_key
 ```
-   ```
+
 
 5. **Run the Application**
-   
+   ```
    python run.py
-   
+   ```
 6. **Access the Dashboard**
 
-In your browser visit `http://127.0.0.1:5000`
+In your browser visit ``` http://127.0.0.1:5000
+```
 
 ---
 
