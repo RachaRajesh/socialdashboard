@@ -24,7 +24,7 @@ git clone https://github.com/RachaRajesh/socialdashboard
 ---
 2. **Virtual Environment Setup**
    
-  --- python3 -m venv venv ---
+  ``` python3 -m venv venv ```
   --- source venv/bin/activate --- (MAC OR LINUX)
            (or)
   --- source venv/Scripts/activate ---(WINDOWS)
@@ -77,7 +77,7 @@ In your browser visit `http://127.0.0.1:5000`
 - **Python-dotenv** — To manage environment variables.
 – **Jinja2**: For HTML template rendering on Flask.
 You will need to install these dependencies with:
-```bash
+
 pip install -r requirements. txt
 ```
 
