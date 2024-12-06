@@ -38,7 +38,7 @@ Set up the SQLite database and tables:
 
   in  python
 ```
-from app. models import db, User, Post
+from app. models import db, User, Post:
    db.connect()
    db. create_tables([User, Post])
    User. create(username="default_user", email="default@example.com")
