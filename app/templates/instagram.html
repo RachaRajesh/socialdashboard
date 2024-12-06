@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Instagram Dashboard</h2>
+
+<!-- Form for posting to Instagram -->
+<form method="POST" action="/instagram">
+    <textarea name="ig_content" placeholder="Write your post caption here..." required></textarea>
+    <input type="text" name="ig_image_url" placeholder="Image URL (optional)">
+    <button type="submit">Post to Instagram</button>
+</form>
+
+{% if instagram_response %}
+    {% if instagram_response.error %}
+        <p style="color: red;">Error: {{ instagram_response.error }}</p>
+    {% else %}
+        <p>Post created successfully! Post ID: {{ instagram_response.post_id }}</p>
+    {% endif %}
+{% endif %}
+
+<!-- Form for fetching metrics -->
+<form method="GET" action="/instagram">
+    <input type="text" name="post_id" placeholder="Enter Post ID to fetch metrics" required>
+    <button type="submit">Get Metrics</button>
+</form>
+
+{% if instagram_metrics %}
+    <h3>Metrics for Post ID</h3>
+    <p>Likes: {{ instagram_metrics.likes }}</p>
+    <p>Impressions: {{ instagram_metrics.impressions }}</p>
+    <p>Reach: {{ instagram_metrics.reach }}</p>
+{% endif %}
+{% endblock %}
+

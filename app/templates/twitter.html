@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Twitter Dashboard</h2>
+
+<!-- Section to Post a Tweet -->
+<form method="POST" action="/twitter">
+    <h3>Post a Tweet</h3>
+    <textarea name="tweet_content" placeholder="Write your tweet here..." required></textarea>
+    <button type="submit">Post Tweet</button>
+</form>
+
+{% if tweet_response %}
+    <h3>Tweet Response</h3>
+    {% if tweet_response.error %}
+        <p class="error">Error: {{ tweet_response.error }}</p>
+    {% else %}
+        <p>Tweet successfully posted! <a href="{{ tweet_response.tweet_url }}" target="_blank">View Tweet</a></p>
+    {% endif %}
+{% endif %}
+
+<hr>
+
+<!-- Section to View Tweet Metrics -->
+<form method="POST" action="/twitter">
+    <h3>View Tweet Metrics</h3>
+    <label for="tweet_id">Tweet ID:</label>
+    <input type="text" name="tweet_id" id="tweet_id" placeholder="Enter Tweet ID" required>
+    <button type="submit">Get Metrics</button>
+</form>
+
+{% if metrics and metrics.error %}
+    <p class="error">Error: {{ metrics.error }}</p>
+{% elif metrics %}
+    <h3>Metrics for Tweet ID: {{ metrics.id }}</h3>
+    <p><strong>Content:</strong> {{ metrics.content }}</p>
+    <p><strong>Likes:</strong> {{ metrics.likes }}</p>
+    <p><strong>Retweets:</strong> {{ metrics.retweets }}</p>
+    <p><strong>Views:</strong> {{ metrics.views }}</p>
+{% else %}
+    <p>No metrics found for the given Tweet ID.</p>
+{% endif %}
+{% endblock %}

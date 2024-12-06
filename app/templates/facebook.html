@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Facebook Dashboard</h2>
+
+<!-- Section to Post to Facebook -->
+<form method="POST" action="/facebook">
+    <h3>Post to Facebook</h3>
+    <textarea name="fb_content" placeholder="Write your post here..." required></textarea>
+    <button type="submit">Post to Facebook</button>
+</form>
+
+{% if fb_response %}
+    <h3>Facebook Post Response</h3>
+    {% if fb_response.error %}
+        <p class="error">Error: {{ fb_response.error }}</p>
+    {% else %}
+        <p>Post successfully created! <a href="{{ fb_response.post_link }}" target="_blank">View Post</a></p>
+    {% endif %}
+{% endif %}
+
+<hr>
+<!-- 
+Section to Fetch Metrics for a Post 
+<h3>Check Facebook Post Metrics</h3>
+<form method="GET" action="/facebook">
+    <label for="post_id">Post ID:</label>
+    <input type="text" id="post_id" name="post_id" placeholder="Enter Post ID" required>
+    <button type="submit">Get Metrics</button>
+</form>
+
+{% if fb_metrics %}
+    <h3>Facebook Post Metrics</h3>
+    <ul>
+        {% for metric, value in fb_metrics.items() %}
+            <li>{{ metric }}: {{ value }}</li>
+        {% endfor %}
+    </ul>
+{% elif metrics_error %}
+    <p class="error">Error: {{ metrics_error }}</p>
+{% endif %}
+
+<hr>
+
+-->
+<!-- Section to View Recent Facebook Posts -->
+<h3>Recent Facebook Posts</h3>
+<ul>
+    {% for post in posts %}
+        <li>
+            {{ post.content }} (<a href="{{ post.post_link }}" target="_blank">View Post</a>)
+        </li>
+    {% else %}
+        <li>No recent posts found.</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

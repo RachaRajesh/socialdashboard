@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Posts by {{ user.username }}</h2>
+<p>Email: {{ user.email }}</p>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Platform</th>
+        <th>Content</th>
+        <th>Link</th>
+        <th>Created At</th>
+    </tr>
+    {% for post in posts %}
+    <tr>
+        <td>{{ post.id }}</td>
+        <td>{{ post.platform }}</td>
+        <td>{{ post.content }}</td>
+        <td><a href="{{ post.post_link }}" target="_blank">View Post</a></td>
+        <td>{{ post.created_at }}</td>
+    </tr>
+    {% else %}
+    <tr>
+        <td colspan="5">No posts found.</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
