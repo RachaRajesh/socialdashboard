@@ -37,12 +37,12 @@ git clone https://github.com/RachaRajesh/socialdashboard
 Set up the SQLite database and tables:
 
   in  python
-  ---
+```
 >>> from app. models import db, User, Post
    >>> db.connect()
 >>> db. create_tables([User, Post])
 >>> User. create(username="default_user", email="default@example.com")
-  ---
+ ```
 4. **Set Up Environment Variables**
    
 Create a `. env` file then you add the below:example.env is given in repo
