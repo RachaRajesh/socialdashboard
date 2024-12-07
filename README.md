@@ -119,6 +119,6 @@ Store the application configuration such as db connection, secret keys etc.
 
 ## Authors and Contributions
 
-- Rajesh: App Development adn Testing
-- Vishnu: UI Development and creation of API ID's
+- Rajesh: App Development and API ID's
+- Vishnu: UI development and Testing
 ---
